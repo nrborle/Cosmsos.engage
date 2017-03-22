@@ -12,12 +12,6 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody rb;
     private AudioSource[] audioSource;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-        audioSource = GetComponents<AudioSource>();
-    }
-
 	public float speed;
 	public float tilt;
 	public Boundary boundary;
@@ -32,6 +26,11 @@ public class PlayerController : MonoBehaviour {
 
     private float nextFire;
 
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        audioSource = GetComponents<AudioSource>();
+    }
 
     void Update(){
 

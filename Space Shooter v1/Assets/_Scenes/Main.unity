@@ -465,7 +465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a92fcff606208941a6e84dd5f0497d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 1104767321647376, guid: 6ee0a79ca6dffce4cab255cf666c20c6, type: 2}
+  asteroid: {fileID: 1104767321647376, guid: 6ee0a79ca6dffce4cab255cf666c20c6, type: 2}
+  enemy: {fileID: 1297912732893576, guid: cfae951cd12cf7646902946adae82dee, type: 2}
   spawnValues: {x: 13.5, y: 0, z: 14}
   hazardCount: 10
   spawnWait: 0.5
@@ -498,7 +499,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 498e9951e41733649986a56eed99ba1d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -927,6 +928,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &651699649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651699639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6581978899ecd34b9b4f0757d0c5c00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  scoreValue: 0
+  deathClip: {fileID: 8300000, guid: a019ae3af8e864616b85773c509f5285, type: 3}
+  playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
+--- !u!114 &651699650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651699639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f467b8875c60cd44a7a1bc78b207107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &654078282
 GameObject:
   m_ObjectHideFlags: 0

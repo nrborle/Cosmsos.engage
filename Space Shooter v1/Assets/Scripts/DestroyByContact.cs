@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class DestroyByContact : MonoBehaviour {
 
-	public GameObject explosion;
-	public GameObject playerExplosion;
-	public int scoreValue;
+	//public GameObject explosion;
+	//public GameObject playerExplosion;
+	//public int scoreValue;
+    public int damage = 10;
 	private GameController gameController;
 
 	void Start(){
@@ -24,14 +25,24 @@ public class DestroyByContact : MonoBehaviour {
 			return;
 		}
 
-		Instantiate (explosion, transform.position, transform.rotation);
+		//Instantiate (explosion, transform.position, transform.rotation);
 
-		if (other.tag == "Player") {
-			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
-			gameController.GameOver ();
+        if(other.tag == gameObject.tag)
+        {
+            return;
+        }
+
+        PlayerHealth ph = other.GetComponent<PlayerHealth>();
+        if(ph != null)
+        {
+            ph.TakeDamage(damage);
 		}
-		gameController.AddScore (scoreValue);
-		Destroy (other.gameObject);
-		Destroy (gameObject);
-	}
+        else
+        {
+            Destroy(other.gameObject);
+        }
+        //Destroy (gameObject);
+        GetComponent<PlayerHealth>().TakeDamage(10);
+
+    }
 }
