@@ -1,0 +1,11 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Assertions;
+
+public class Mover : MonoBehaviour {
+	public float speed;
+	void Start(){
+		gameObject.GetComponent<Rigidbody>().velocity = transform.forward * speed;
+	}
+}

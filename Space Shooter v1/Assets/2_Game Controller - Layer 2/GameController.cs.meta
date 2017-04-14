@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 9a92fcff606208941a6e84dd5f0497d6
+timeCreated: 1492144753
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - asteroid: {fileID: 1104767321647376, guid: 6ee0a79ca6dffce4cab255cf666c20c6, type: 2}
+  - enemy1: {fileID: 1297912732893576, guid: cfae951cd12cf7646902946adae82dee, type: 2}
+  - enemy2: {fileID: 1036618342872800, guid: 30b7ce0b890dbba499b907c44d3c9c24, type: 2}
+  - enemyFormation: {fileID: 1219437585065864, guid: 8e9c766e2f2fec94ca1880d73308d4c9,
+      type: 2}
+  - scoreText: {instanceID: 0}
+  - restartText: {instanceID: 0}
+  - gameOverText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
